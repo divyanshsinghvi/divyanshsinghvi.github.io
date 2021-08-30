@@ -2,7 +2,8 @@
 layout: about
 title: about
 permalink: /
-description: <a href="#">Affiliations</a>. Address. Contacts. Moto. Etc.
+description: Quantitative Researcher.
+<!--<a href="#">Quantitative Researcher</a>.-->
 
 profile:
   align: right
