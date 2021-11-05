@@ -71,14 +71,14 @@ stackoverflow_id: 5458946 #your stackoverflow id
 contact_note: >
   Best way to reach is through my email 
 
-google_analytics: UA-XXXXXXXXX # out your google-analytics code
+google_analytics: G-8VFBCD47PN # out your google-analytics code
 panelbear_analytics: XXXXXXXXX # panelbear analytics site ID
 
 # -----------------------------------------------------------------------------
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: ds-blog  # your blog must have a name for it to show up in the nav bar
+blog_name: dancing alone  # your blog must have a name for it to show up in the nav bar
 blog_description: The blog will possibly deals with my paper reading and understanding
 permalink: /blog/:year/:title/
 
@@ -182,8 +182,8 @@ jekyll-archives:
 
 scholar:
 
-  last_name: Einstein
-  first_name: [Albert, A.]
+  last_name: Singhvi
+  first_name: [Divyansh, D.]
 
   style: apa
   locale: en
