@@ -78,7 +78,7 @@ panelbear_analytics: XXXXXXXXX # panelbear analytics site ID
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: dancing alone  # your blog must have a name for it to show up in the nav bar
+blog_name: eklacholo  # your blog must have a name for it to show up in the nav bar
 blog_description: The blog will possibly deals with my paper reading and understanding
 permalink: /blog/:year/:title/
 
@@ -87,7 +87,7 @@ pagination:
   enabled: true
 
 # Comments
-disqus_shortname: al-folio # put your disqus shortname
+# disqus_shortname: al-folio # put your disqus shortname
 # https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 # -----------------------------------------------------------------------------
@@ -227,7 +227,7 @@ responsive_image:
 # Jekyll Diagrams
 # -----------------------------------------------------------------------------
 
-jekyll-diagrams:
+# jekyll-diagrams:
     # configuration, see https://github.com/zhustec/jekyll-diagrams.
     # feel free to comment out this section if not using jekyll diagrams.
 
