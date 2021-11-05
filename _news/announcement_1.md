@@ -5,7 +5,7 @@ date: 2021-09-01 8:00:00-0400
 inline: true
 ---
 
-Joining Millennium as Quantitative Researcher. 
+Joining Millennium Management as Quantitative Researcher.
 
 <!-- 
 ***

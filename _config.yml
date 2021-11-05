@@ -53,7 +53,7 @@ github_username: divyanshsinghvi # your GitHub user name
 gitlab_username: # your GitLab user name
 twitter_username: divyanshsinghvi # your Twitter handle
 linkedin_username: divyanshsinghvi # your LinkedIn user name
-scholar_userid: # your Google Scholar ID
+scholar_userid: 7AaPJF8AAAAJ # your Google Scholar ID
 orcid_id: # your ORCID ID
 medium_username: # your Medium username
 quora_username: # your Quora username
@@ -64,12 +64,12 @@ work_url: # work page URL
 keybase_username: # your keybase user name
 wikidata_id: # your wikidata id
 dblp_url: # your DBLP profile url
-stackoverflow_id: #your stackoverflow id
+stackoverflow_id: 5458946 #your stackoverflow id
 
-rss_icon: true
+# rss_icon: true
 
 contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
+  Best way to reach is through my email 
 
 google_analytics: UA-XXXXXXXXX # out your google-analytics code
 panelbear_analytics: XXXXXXXXX # panelbear analytics site ID
@@ -78,8 +78,8 @@ panelbear_analytics: XXXXXXXXX # panelbear analytics site ID
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio  # your blog must have a name for it to show up in the nav bar
-blog_description: a simple whitespace theme for academics
+blog_name: ds-blog  # your blog must have a name for it to show up in the nav bar
+blog_description: The blog will possibly deals with my paper reading and understanding
 permalink: /blog/:year/:title/
 
 # Pagination
