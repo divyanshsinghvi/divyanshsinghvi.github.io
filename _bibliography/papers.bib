@@ -1,114 +1,45 @@
 ---
 ---
+References
+==========
 
-@string{aps = {American Physical Society,}}
-
-@book{einstein1920relativity,
-  title={Relativity: the Special and General Theory},
-  author={Einstein, Albert},
-  year={1920},
-  publisher={Methuen & Co Ltd},
-  html={relativity.html}
+@article{singhvi2024knowing,
+  title={Knowing Your Nonlinearities: Shapley Interactions Reveal the Underlying Structure of Data},
+  author={Singhvi, Divyansh and Erkelens, Andrej and Jain, Raghav and Misra, Diganta and Saphra, Naomi},
+  journal={arXiv preprint arXiv:2403.13106},
+  abstract={Measuring nonlinear feature interaction is an established approach to understanding complex patterns of attribution in many models. In this paper, we use Shapley Taylor interaction indices (STII) to analyze the impact of underlying data structure on model representations in a variety of modalities, tasks, and architectures. Considering linguistic structure in masked and auto-regressive language models (MLMs and ALMs), we find that STII increases within idiomatic expressions and that MLMs scale STII with syntactic distance, relying more on syntax in their nonlinear structure than ALMs do. Our speech model findings reflect the phonetic principal that the openness of the oral cavity determines how much a phoneme varies based on its context. Finally, we study image classifiers and illustrate that feature interactions intuitively reflect object boundaries. Our wide range of results illustrates the benefits of interdisciplinary work and domain expertise in interpretability research.},
+  year={2024},
+  url={https://arxiv.org/abs/2403.13106},
+  html={https://arxiv.org/abs/2403.13106},
+  selected={true},
 }
 
-@book{einstein1956investigations,
-  bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
-}
+@INPROCEEDINGS{8955253,
+  author={Agarwal, Megha and Singhvi, Divyansh and Malakar, Preeti and Byna, Suren},
+  booktitle={2019 IEEE/ACM Fourth International Parallel Data Systems Workshop (PDSW)}, 
+  title={Active Learning-based Automatic Tuning and Prediction of Parallel I/O Performance}, 
+  year={2019},
+  pages={20-29},
+  abstract={Parallel I/O is an indispensable part of scientific applications. The current stack of parallel I/O contains many tunable parameters. While changing these parameters can increase I/O performance many-fold, the application developers usually resort to default values because tuning is a cumbersome process and requires expertise. We propose two auto-tuning models, based on active learning that recommend a good set of parameter values (currently tested with Lustre parameters and MPI-IO hints) for an application on a given system. These models use Bayesian optimization to find the values of parameters by minimizing an objective function. The first model runs the application to determine these values, whereas, the second model uses an I/O prediction model for the same. Thus the training time is significantly reduced in comparison to the first model (e.g., from 800 seconds to 18 seconds). Also both the models provide flexibility to focus on improvement of either read or write performance. To keep the tuning process generic, we have focused on both read and write performance. We have validated our models using an I/O benchmark (IOR) and 3 scientific application I/O kernels (S3D-IO, BT-IO and GenericIO) on two supercomputers (HPC2010 and Cori). Using the two models, we achieve an increase in I/O bandwidth of up to 11× over the default parameters. We got up to 3× improvements for 37 TB writes, corresponding to 1 billion particles in GenericIO. We also achieved up to 3.2× higher bandwidth for 4.8 TB of noncontiguous I/O in BT-IO benchmark.},
+  doi={10.1109/PDSW49588.2019.00007},
+  month={Nov},
+  url={https://ieeexplore.ieee.org/document/8955253},
+  html={https://ieeexplore.ieee.org/document/8955253},
+  selected={true},
+  }
 
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
-}
-
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  location={New Jersey},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  google_scholar_id={qyhmnyLat1gC},
-  video={https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
-  additional_info={. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
-  annotation={* Example use of superscripts<br>† Albert Einstein},
-  selected={true}
-}
-
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
-}
-
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
-}
-
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
-}
-
-@Article{einstein1905photoelectriceffect,
-  bibtex_show={true},
-  abbr={Ann. Phys.},
-  title="{{\"U}ber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}",
-  author={Albert Einstein},
-  abstract={This is the abstract text.},
-  journal={Ann. Phys.},
-  volume={322},
-  number={6},
-  pages={132--148},
-  year={1905},
-  doi={10.1002/andp.19053220607},
-  award={Albert Einstein receveid the **Nobel Prize in Physics** 1921 *for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect*},
-  award_name={Nobel Prize}
-}
-
-@book{przibram1967letters,
-  bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif},
-  abbr={Vision}
+@INPROCEEDINGS{9781020,
+author={Agarwal, Megha and Jain, Pragya and Singhvi, Divyansh and Malakar, Preeti},
+booktitle={2021 IEEE 23rd Int Conf on High Performance Computing & Communications; 7th Int Conf on Data Science & Systems; 19th Int Conf on Smart City; 7th Int Conf on Dependability in Sensor, Cloud & Big Data Systems & Application (HPCC/DSS/SmartCity/DependSys)}, 
+title={Execution- and Prediction-Based Auto-Tuning of Parallel Read and Write Parameters}, 
+year={2021},
+volume={},
+number={},
+pages={587-594},
+keywords={Training;Runtime;Smart cities;Bandwidth;Predictive models;Benchmark testing;Supercomputers;Parallel I/O;machine learning;active learning;performance prediction;tuning},
+doi={10.1109/HPCC-DSS-SmartCity-DependSys53884.2021.00100},
+selected={true},
+abstract={Parallel I/O tuning is useful for scientific applications that read and write huge amounts of data. I/O performance depends on multiple tunable parameters such as the stripe size, stripe count, the collective I/O buffer size, and the number of collective I/O aggregators. The search space being large, it is cumbersome to tune the I/O parameters for every system to achieve optimal results. We propose active learning-based execution and prediction-based tuning models. These recommend a good set of I/O parameter values for an application on a given system. These models use optimization to find the parameter values; the objective is to minimize I/O time. The models allow to focus on improvement of read and/or write performance, and separate tuning of reads and writes. We evaluated our models using I/O kernels of scientific applications (S3D-IO, BT-IO and GenericIO) and the highly configurable IOR benchmark on an Intel-based supercomputer, HPC2010. We achieved an increase in I/O bandwidth of up to 8x over the default parameters, when both read and write are optimized together, and up to 20x in read bandwidths when optimized separately.},
+url={https://ieeexplore.ieee.org/abstract/document/9781020},
+html={https://ieeexplore.ieee.org/abstract/document/9781020}
 }
