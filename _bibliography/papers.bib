@@ -3,17 +3,22 @@
 References
 ==========
 
-@article{singhvi2024knowing,
-  title={Knowing Your Nonlinearities: Shapley Interactions Reveal the Underlying Structure of Data},
-  author={Singhvi, Divyansh and Erkelens, Andrej and Jain, Raghav and Misra, Diganta and Saphra, Naomi},
-  journal={arXiv preprint arXiv:2403.13106},
-  abstract={Measuring nonlinear feature interaction is an established approach to understanding complex patterns of attribution in many models. In this paper, we use Shapley Taylor interaction indices (STII) to analyze the impact of underlying data structure on model representations in a variety of modalities, tasks, and architectures. Considering linguistic structure in masked and auto-regressive language models (MLMs and ALMs), we find that STII increases within idiomatic expressions and that MLMs scale STII with syntactic distance, relying more on syntax in their nonlinear structure than ALMs do. Our speech model findings reflect the phonetic principal that the openness of the oral cavity determines how much a phoneme varies based on its context. Finally, we study image classifiers and illustrate that feature interactions intuitively reflect object boundaries. Our wide range of results illustrates the benefits of interdisciplinary work and domain expertise in interpretability research.},
-  year={2024},
-  url={https://arxiv.org/abs/2403.13106},
-  html={https://arxiv.org/abs/2403.13106},
-  dimensions={true},  
-  selected={true},
+@INPROCEEDINGS{singhvi-etal-2025-using,
+    title = {Using Shapley interactions to understand how models use structure},
+    author = {Singhvi, Divyansh  and Misra, Diganta and Erkelens, Andrej and Jain, Raghav and Papadimitriou, Isabel  and Saphra, Naomi},
+    editor = {Che, Wanxiang  and Nabende, Joyce  and Shutova, Ekaterina  and Pilehvar, Mohammad Taher"},
+    booktitle = {Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+    month = {jul},
+    year = {2025},
+    address = {Vienna, Austria},
+    publisher = {Association for Computational Linguistics},
+    url = {https://aclanthology.org/2025.acl-long.1011/},
+    doi = {10.18653/v1/2025.acl-long.1011},
+    pages = "20727--20737",
+    ISBN = "979-8-89176-251-0"
+    selected={true},
 }
+
 
 @INPROCEEDINGS{8955253,
   author={Agarwal, Megha and Singhvi, Divyansh and Malakar, Preeti and Byna, Suren},
@@ -45,4 +50,16 @@ selected={true},
 abstract={Parallel I/O tuning is useful for scientific applications that read and write huge amounts of data. I/O performance depends on multiple tunable parameters such as the stripe size, stripe count, the collective I/O buffer size, and the number of collective I/O aggregators. The search space being large, it is cumbersome to tune the I/O parameters for every system to achieve optimal results. We propose active learning-based execution and prediction-based tuning models. These recommend a good set of I/O parameter values for an application on a given system. These models use optimization to find the parameter values; the objective is to minimize I/O time. The models allow to focus on improvement of read and/or write performance, and separate tuning of reads and writes. We evaluated our models using I/O kernels of scientific applications (S3D-IO, BT-IO and GenericIO) and the highly configurable IOR benchmark on an Intel-based supercomputer, HPC2010. We achieved an increase in I/O bandwidth of up to 8x over the default parameters, when both read and write are optimized together, and up to 20x in read bandwidths when optimized separately.},
 url={https://ieeexplore.ieee.org/abstract/document/9781020},
 html={https://ieeexplore.ieee.org/abstract/document/9781020}
+}
+
+@article{singhvi2024knowing,
+  title={Knowing Your Nonlinearities: Shapley Interactions Reveal the Underlying Structure of Data},
+  author={Singhvi, Divyansh and Erkelens, Andrej and Jain, Raghav and Misra, Diganta and Saphra, Naomi},
+  journal={arXiv preprint arXiv:2403.13106},
+  abstract={Measuring nonlinear feature interaction is an established approach to understanding complex patterns of attribution in many models. In this paper, we use Shapley Taylor interaction indices (STII) to analyze the impact of underlying data structure on model representations in a variety of modalities, tasks, and architectures. Considering linguistic structure in masked and auto-regressive language models (MLMs and ALMs), we find that STII increases within idiomatic expressions and that MLMs scale STII with syntactic distance, relying more on syntax in their nonlinear structure than ALMs do. Our speech model findings reflect the phonetic principal that the openness of the oral cavity determines how much a phoneme varies based on its context. Finally, we study image classifiers and illustrate that feature interactions intuitively reflect object boundaries. Our wide range of results illustrates the benefits of interdisciplinary work and domain expertise in interpretability research.},
+  year={2024},
+  url={https://arxiv.org/abs/2403.13106},
+  html={https://arxiv.org/abs/2403.13106},
+  dimensions={true},  
+  selected={false},
 }
