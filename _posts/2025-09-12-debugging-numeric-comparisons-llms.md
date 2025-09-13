@@ -65,7 +65,7 @@ LLMs can ace complex reasoning yet still fail at simple numeric comparisons like
 
 ### 4) Causal edits: last-layer MLP corrupts the decision
 
-**What**: Activation patching from **L24→L25** at multiple hooks using TransformerLens.
+**What**: Activation patching from **L24→L25** at multiple hooks using TransformerLens [Nanda & Bloom, 2022](#references).
 **Finding**: Patching `mlp_post`/`resid_post` **improves** accuracy; other patches often hurt.
 **Why**: This isolates the **final-block MLP** as the primary corruption source.
 
@@ -82,7 +82,7 @@ LLMs can ace complex reasoning yet still fail at simple numeric comparisons like
 
 ## Bottom line
 
-Gemma-2-2B-IT internally represents the correct comparator but the last-layer MLP (readout) introduces a Yes-biased corruption. Simple, principled interventions—patching or ablating ~50 neurons—substantially reduce errors, and diagnostics suggest a lingering length heuristic distinct from true value comparison.
+Gemma-2-2B-IT internally represent the correct comparator but the last-layer MLP (readout) introduces a Yes-biased corruption. Simple, principled interventions—patching or ablating ~50 neurons—substantially reduce errors, and diagnostics suggest a lingering length heuristic distinct from true value comparison.
 
 
 
@@ -200,7 +200,9 @@ To understand the geometry of internal model's representation we conducted a PCA
 PCA was fit on each dataset's activations. Activations from other datasets were then projected into this learned PCA space.
 This helps us to ask: `does a separating axis from one dataset also reveal structure in another? Answer is YES`.  
 
-Calculated cosine similarity between **Yes-No mean difference** axes in source vs target representations. 
+Calculated cosine similarity between **Yes-No mean difference** [Appendix B](#appendix-b) axes in source vs target representations. 
+
+
 
 ### Cross-dataset alignment (cosine similarity)
 
@@ -336,14 +338,14 @@ Patching the output of the MLP sub-block (resid_post, mlp_post) reliably improve
 
 **Methodology**:
 
-1. Discovery: First, I identified the most "harmful" neurons by scoring their negative impact on accuracy across the entire dataset. Neurons were ranked based on a gradient-based method that measures how much their activation contributes to pushing the final decision in the wrong direction (see Appendix C for the mathematical details).
+1. Discovery: First, I identified the most "harmful" neurons by scoring their negative impact on accuracy across the entire dataset. Neurons were ranked based on a gradient-based method that measures how much their activation contributes to pushing the final decision in the wrong direction (see [Appendix C](#appendix-c) for the mathematical details).
 
 2. Verification: To ensure these findings weren't just an artifact of overfitting to the test data, I repeated the experiment with a formal train/validation split. The harmful neurons were identified using only the training data, and then ablated to measure the performance change on the held-out validation data.
 
 
 
 Score neurons by their negative impact on accuracy (per dataset and globally). . Note that here we are using the full data as training and prediction with no splits. Next section deals with train and validation splits, the results remain similar.
-Appendix C. describes the mathematical intuition.
+[Appendix C](#appendix-c). describes the mathematical intuition.
 
  h_j element_wise_multiplication (W_out[j] · g) where g is gradient of dot product of projection of layer norm and Yes/No direction with respect to r_post, and W_out is the weight element of j_{th} neuron and h_j is the activation value of the neuron.  
  We then align this with truth_yn predictions (+1 if Yes else -1)
@@ -413,7 +415,7 @@ Then Integer_diff_len = 22
 then tied integer_equal_len and decimal_equal_len = 27
 
 
-### B. What is the Yes–No mean difference?
+### B. What is the Yes–No mean difference? {#appendix-b}
 
 Let each example i have:
 - activation vector: h_i (dimension d)
@@ -439,7 +441,7 @@ Signed score of any activation h along this axis
 Separation magnitude along the axis
 - separation = | E[score(h) | y=Yes] − E[score(h) | y=No] |
 
-### C. Harmful Neuron Finding
+### C. Harmful Neuron Finding {#appendix-c}
 
 #### How do I rank the neurons from most harmful to least harmful?
 - We focus on the last transformer block post which it goes to ln_head.
@@ -481,7 +483,11 @@ Basically trying out to see, h_j how strongly neuron j is firing and gradient pr
 Next step would be to multiply it by (1 if Yes else -1) to align by truth.
 
 
-## References
+## References {#references}
+
+- Nanda, N., & Bloom, J. (2022). *TransformerLens*. GitHub repository. https://github.com/TransformerLensOrg/TransformerLens
+- Alain, G., & Bengio, Y. (2016). Understanding intermediate layers using linear classifier probes. arXiv:1610.01644. https://arxiv.org/abs/1610.01644
+
 
 
 ## Disclaimer
