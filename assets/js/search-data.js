@@ -69,6 +69,9 @@ ninja.data = [{
           section: "News",},{id: "news-short-paper-accepted-in-ieee-hpcc-2021",
           title: 'Short Paper Accepted in IEEE HPCC-2021',
           description: "",
+          section: "News",},{id: "news-our-paper-using-shapley-interactions-to-understand-how-models-use-structure-got-published-in-acl-2025-main",
+          title: 'Our paper Using Shapley interactions to understand how models use structure got published...',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
