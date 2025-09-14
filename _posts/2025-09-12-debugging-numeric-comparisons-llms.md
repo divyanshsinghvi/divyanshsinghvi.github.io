@@ -95,9 +95,10 @@ Gemma-2-2B-IT internally represent the correct comparator but the last-layer MLP
 - [3. Part I — Geometry & Emergence](#3-part-i--geometry--emergence)
 - [4. Part II — Readout vs Representation](#4-part-ii--readout-vs-representation)
 - [5. Part III — Causal Edits (Patching & Ablations)](#5-part-iii--causal-edits-patching--ablations)
-- [6. Discussion](#6-discussion)
-- [7. Repro Notes](#7-repro-notes)
-- [8. Limitations & Next Steps](#8-limitations--next-steps)
+- [6. Limitations & Possible Next steps](#6-limitations--possible-next-steps)
+- [7. Appendix](#7-appendix)
+- [8. References](#8-references)
+- [9. Disclaimer](#9-disclaimer)
 
 ---
 
@@ -388,7 +389,7 @@ Results are not very different from the previous approach with similar trends.
 - (e) Work currently analyse only one model **Gemma-2-2b-it**. And also only instruction tuned model. A good study could have been how the last layer of non instruction tuned behaved vs the instruction tuned. 
 - (f) Doesn't analyse negative numbers in comparison. 
 
-## Appendix
+## 7. Appendix
 
 ### A. Harmful neurons
 
@@ -482,16 +483,27 @@ Basically trying out to see, h_j how strongly neuron j is firing and gradient pr
 
 Next step would be to multiply it by (1 if Yes else -1) to align by truth.
 
+### D. Code & Data Availability
 
-## References {#references}
+All code, notebooks, and datasets used in this analysis are available in the `sprint1` branch of the **som_numeric_comparison** repository on GitHub:  
+[divyanshsinghvi/som_numeric_comparison · sprint1](https://github.com/divyanshsinghvi/som_numeric_comparison/tree/dsinghvi/sprint1). 
+
+Key items include:  
+- `experiment.ipynb` — main notebook with experiments, visualizations, probing & ablation code  
+- `dataset_gen1.py` — script to generate numeric comparison datasets  
+- `gemma_numeric_ab_dataset.jsonl`, `gemma_string_ab_dataset.jsonl` — datasets for numeric vs. string comparisons  
+- Supporting helper scripts and requirements files for reproducibility  
+
+
+## 8. References {#references}
 
 - Nanda, N., & Bloom, J. (2022). *TransformerLens*. GitHub repository. https://github.com/TransformerLensOrg/TransformerLens
 - Alain, G., & Bengio, Y. (2016). Understanding intermediate layers using linear classifier probes. arXiv:1610.01644. https://arxiv.org/abs/1610.01644
 
 
 
-## Disclaimer
-I only did this research in ~15 hours so there are lot of things unexplored and the quality of work can be significantly improved. Took a lot more time in writing than I expected (probably around 7 hours to refine ) .  
+## 9. Disclaimer
+I only did this research in ~15 hours so there are lot of things unexplored and the quality of work can be significantly improved. Took a lot more time in writing than I expected (probably around 7 hours to refine ) . 
 
 
 
