@@ -44,9 +44,9 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-debugging-numeric-comparisons-llms",
+            },{id: "post-debugging-numeric-comparisons-in-llms",
         
-          title: "Debugging Numeric Comparisons Llms",
+          title: "Debugging Numeric Comparisons in LLMs",
         
         description: "Layerwise geometry shows the model internally separates Yes/No, but a last-layer readout corrupts the decision—especially for decimals.",
         section: "Posts",
