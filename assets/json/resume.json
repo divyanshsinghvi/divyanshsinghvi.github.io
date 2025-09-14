@@ -120,6 +120,13 @@
   "certificates": [],
   "publications": [
     {
+      "name": "Using Shapley interactions to understand how models use structure",
+      "publisher": "Association for Computational Linguistics",
+      "releaseDate": "2025-07-01",
+      "summary": "",
+      "url": "https://aclanthology.org/2025.acl-long.1011/"
+    },
+    {
       "name": "Execution-and Prediction-Based Auto-Tuning of Parallel Read and Write Parameters",
       "publisher": "2021 IEEE 23rd Int Conf on High Performance Computing & Communications; 7th Int Conf on Data Science & Systems; 19th Int Conf on Smart City; 7th Int Conf on Dependability in Sensor, Cloud & Big Data Systems & Application (HPCC/DSS/SmartCity/DependSys)",
       "releaseDate": "2021-12-20",
@@ -132,13 +139,6 @@
       "releaseDate": "2019-11-30",
       "summary": "",
       "url": "https://ieeexplore.ieee.org/document/8955253"
-    },
-    {
-      "name": "Knowing Your Nonlinearities: Shapley Interactions Reveal the Underlying Structure of Data",
-      "publisher": "arXiv preprint",
-      "releaseDate": "2024-03-19",
-      "summary": "",
-      "url": "https://arxiv.org/abs/2403.13106"
     }
   ],
   "skills": [
