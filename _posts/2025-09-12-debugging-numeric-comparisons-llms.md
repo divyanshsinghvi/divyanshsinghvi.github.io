@@ -1,5 +1,5 @@
 ---
-# title: "Debugging Numeric Comparisons in LLMs"
+title: "Debugging Numeric Comparisons in LLMs"
 subtitle: "Why models like Gemma-2-2B-IT fail at `9.8 < 9.11`"
 date: 2025-09-12
 description: "Layerwise geometry shows the model internally separates Yes/No, but a last-layer readout corrupts the decision—especially for decimals."
