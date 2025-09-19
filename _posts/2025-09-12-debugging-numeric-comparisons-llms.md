@@ -280,7 +280,7 @@ Clearing in  we can see, integers_diff_len has a much lower correlation with oth
 
 ### 4.1 unembedding analysis
 
-**Goal**: Project model's activation onto it's final output head (model.lm_head.weight). Let **r** =  (`W_u[Yes] − W_u[No]`) / ||(`W_u[Yes] − W_u[No]`)||. We compute two metrics, For each layer’s activations **h**, compute **logit gap** = ⟨h, r⟩ and **forced-choice accuracy** =   (sign(gap)) * (+1 if Yes else -1),  the classification accuracy obtained by taking the sign of logit gap as the prediction multiplied by 1 if Yes else -1.
+**Goal**: Project model's activation onto it's final output head (model.lm_head.weight). Let **r** =  (`W_u[Yes] − W_u[No]`) / \|\|(`W_u[Yes] − W_u[No]`)\|\|. We compute two metrics, For each layer’s activations **h**, compute **logit gap** = ⟨h, r⟩ and **forced-choice accuracy** =   (sign(gap)) * (+1 if Yes else -1),  the classification accuracy obtained by taking the sign of logit gap as the prediction multiplied by 1 if Yes else -1.
 
 a. Logit gap: the positive value for the gap indicates bias towards Yes and negative towards No. The magnitude tells how strongly it reflects. 
 b. Forced choice accuracy: "If model were forced to decide Yes vs No using only the activations projected at this layer, how accurate would it be? "
@@ -434,13 +434,13 @@ Yes–No mean difference vector
 - Delta = mu_Yes − mu_No      (a vector in ℝ^d)
 
 Unit direction (simple linear probe)
-- w = Delta / ||Delta||_2     (normalize Delta to length 1)
+- w = Delta / \|\|Delta\|\|_2     (normalize Delta to length 1)
 
 Signed score of any activation h along this axis
 - score(h) = dot(h, w)        (positive ⇒ evidence for “Yes”, negative ⇒ “No”)
 
 Separation magnitude along the axis
-- separation = | E[score(h) | y=Yes] − E[score(h) | y=No] |
+- separation = \| E[score(h) \| y=Yes] − E[score(h) \| y=No] \|
 
 ### C. Harmful Neuron Finding {#appendix-c}
 
