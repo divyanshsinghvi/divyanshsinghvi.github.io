@@ -1,6 +1,6 @@
 ---
 title: "Debugging Numeric Comparisons in LLMs"
-subtitle: "Why models like Gemma-2-2B-IT fail at `9.8 < 9.11`"
+subtitle: "Why models like Gemma-2-2B-IT fail at `9.11 > 9.8`"
 date: 2025-09-12
 description: "Layerwise geometry shows the model internally separates Yes/No, but a last-layer readout corrupts the decision—especially for decimals."
 tags: [LLM, Mechanistic Interpretability, Numeric Reasoning, Debugging]
@@ -14,14 +14,14 @@ author: divyansh singhvi and LLMs
 Study on Gemma-2-2B-IT
 
 > **TL;DR:**  
-> LLMs *internally* represents the  correct way to compare numbers (80–90% accuracy in penultimate layers) but the **final layer corrupts this knowledge**, causing simple failures like `9.8 < 9.11`.
+> LLMs *internally* represents the  correct way to compare numbers (80–90% accuracy in penultimate layers) but the **final layer corrupts this knowledge**, causing simple failures like `9.11 > 9.8`.
 
 ---
 
 # Executive Summary
 
 ## The Problem: A paradox in LLM Capabilities
-LLMs can ace complex reasoning yet still fail at simple numeric comparisons like 9.8 < 9.11. Using Gemma-2-2B-IT, I ask: **Does the model internally represent the correct Yes/No decision, and if so, where does the failure happen?** This matters because robust numeric comparison is a prerequisite for any downstream task that relies on arithmetic or ordering.
+LLMs can ace complex reasoning yet still fail at simple numeric comparisons like 9.11 > 9.8. Using Gemma-2-2B-IT, I ask: **Does the model internally represent the correct Yes/No decision, and if so, where does the failure happen?** This matters because robust numeric comparison is a prerequisite for any downstream task that relies on arithmetic or ordering.
 
 ## High-level takeaways
 
@@ -103,7 +103,7 @@ Gemma-2-2B-IT internally represent the correct comparator but the last-layer MLP
 ---
 
 ## 1. Motivation
-Large Language Models (LLMs) have demonstrated Olympiad-level performance in complex reasoning, yet they paradoxically stumble on fundamental operations like basic numeric comparisons `9.8 < 9.11`. If a model cannot reliably perform basic numeric comparisons, its utility in downstream tasks that depend on such reasoning is severely compromised. This study investigates why a model like Gemma-2-2B-IT fails at these seemingly simple evaluations.
+Large Language Models (LLMs) have demonstrated Olympiad-level performance in complex reasoning, yet they paradoxically stumble on fundamental operations like basic numeric comparisons `9.11 > 9.8`. If a model cannot reliably perform basic numeric comparisons, its utility in downstream tasks that depend on such reasoning is severely compromised. This study investigates why a model like Gemma-2-2B-IT fails at these seemingly simple evaluations.
 
 ---
 
@@ -384,10 +384,10 @@ Results are not very different from the previous approach with similar trends.
 
 - (a) **Prompt diversity** : Have analysed a single prompt. Can try for different types of prompts. 
 - (b) **String Analysis** : More exploration needed why strings were biased towards *No*. 
-- (c) Tokenization was not deeply analysed. Only observation was that every number and comparator operator was getting tokenized individually. 
+- (c) Tokenization was not deeply analysed. 
 - (d) Didn't try **PCA post ablation** to see how the geometry changes. 
 - (e) Work currently analyse only one model **Gemma-2-2b-it**. And also only instruction tuned model. A good study could have been how the last layer of non instruction tuned behaved vs the instruction tuned. 
-- (f) Doesn't analyse negative numbers in comparison. 
+- (f) Doesn't analyse negative numbers in comparison.
 
 ## 7. Appendix
 
