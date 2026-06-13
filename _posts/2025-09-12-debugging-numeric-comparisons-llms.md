@@ -8,6 +8,9 @@ cover: /assets/debug-num-llms/pca_scatter_plot_truth.png
 math: true
 layout: post
 author: divyansh singhvi and LLMs
+toc:
+  sidebar: left
+  collapse: expanded
 ---
 
 <!-- # Debugging Numeric Comparisons in LLMs -->
