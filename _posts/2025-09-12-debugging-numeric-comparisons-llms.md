@@ -495,7 +495,9 @@ Key items include:
 - `gemma_numeric_ab_dataset.jsonl`, `gemma_string_ab_dataset.jsonl` — datasets for numeric vs. string comparisons
 - Supporting helper scripts and requirements files for reproducibility
 
-## 8. References {#references}
+<span id="references"></span>
+
+## 8. References
 
 - Nanda, N., & Bloom, J. (2022). _TransformerLens_. GitHub repository. https://github.com/TransformerLensOrg/TransformerLens
 - Alain, G., & Bengio, Y. (2016). Understanding intermediate layers using linear classifier probes. arXiv:1610.01644. https://arxiv.org/abs/1610.01644
