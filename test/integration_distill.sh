@@ -4,11 +4,54 @@ set -euo pipefail
 tmp_dir="$(mktemp -d)"
 tmp_override="${tmp_dir}/distill-override.yml"
 tmp_site="${tmp_dir}/site"
+distill_fixture="_posts/2021-05-22-distill.md"
 
 cleanup() {
+  rm -f "${distill_fixture}"
   rm -rf "${tmp_dir}"
 }
 trap cleanup EXIT
+
+cat >"${distill_fixture}" <<'MARKDOWN'
+---
+layout: distill
+title: a distill integration post
+description: an integration fixture for distill runtime features
+tags: distill formatting
+giscus_comments: true
+date: 2021-05-22
+featured: false
+mermaid:
+  enabled: true
+  zoomable: true
+chart:
+  mermaid: true
+tikzjax: true
+related_posts: false
+
+authors:
+  - name: Test Author
+    affiliations:
+      name: Test Lab
+---
+
+## Mermaid
+
+```mermaid
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->>Bob: Hello
+```
+
+## TikZ
+
+```tikz
+\begin{tikzpicture}
+\draw (0,0) -- (1,1);
+\end{tikzpicture}
+```
+MARKDOWN
 
 cat >"${tmp_override}" <<'YAML'
 giscus:
