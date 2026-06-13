@@ -205,7 +205,13 @@ disqus_shortname: al-folio # put your disqus shortname
 # Optional: Set default categories and tags for posts from each source.
 external_sources:
   - name: "Substack"
-    rss_url: "https://divyanshsinghvi.substack.com/feed"
+    posts:
+      - url: "https://divyanshsinghvi.substack.com/p/fix-vs-code-remote-ssh-repeated-verification"
+        published_date: "2026-06-09 09:24:52 UTC"
+      - url: "https://divyanshsinghvi.substack.com/p/asymmetric-risks-of-unfaithful-reasoning"
+        published_date: "2026-02-27 11:15:05 UTC"
+      - url: "https://divyanshsinghvi.substack.com/p/efficient-streaming-language-models"
+        published_date: "2025-12-15 07:04:16 UTC"
 
 # -----------------------------------------------------------------------------
 # Newsletter
