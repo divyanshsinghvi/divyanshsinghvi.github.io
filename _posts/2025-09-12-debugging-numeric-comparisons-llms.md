@@ -12,26 +12,9 @@ authors:
     affiliations:
       name: Independent Researcher
 toc:
-  - name: Executive Summary
-    subsections:
-      - name: "The Problem: A paradox in LLM Capabilities"
-      - name: High-level takeaways
-      - name: Key Results
-      - name: Bottom line
-  - name: "1. Motivation"
-  - name: "2. Dataset & Setup"
-    subsections:
-      - name: Custom Dataset
-      - name: Forced-Choice Output
-      - name: "Terminology and Assumptions:"
-      - name: Baseline Performance
-  - name: "Part I - Geometry & Emergence: Finding the Knowledge"
-  - name: "4. Part II — Readout vs Representation: Finding the Failure"
-  - name: "5. Part III — Causal Edits (Patching & Ablations)"
-  - name: "6. Limitations & Possible Next steps:"
-  - name: "7. Appendix"
-  - name: "8. References"
-  - name: "9. Disclaimer"
+  sidebar: left
+  collapse: auto
+  collapse_depth: 2
 ---
 
 <!-- # Debugging Numeric Comparisons in LLMs -->
@@ -40,8 +23,6 @@ Study on Gemma-2-2B-IT
 
 > **TL;DR:**
 > LLMs _internally_ represents the correct way to compare numbers (80–90% accuracy in penultimate layers) but the **final layer corrupts this knowledge**, causing simple failures like `9.11 > 9.8`.
-
----
 
 # Executive Summary
 
