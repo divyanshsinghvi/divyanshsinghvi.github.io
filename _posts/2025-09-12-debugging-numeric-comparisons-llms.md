@@ -12,8 +12,26 @@ authors:
     affiliations:
       name: Independent Researcher
 toc:
-  sidebar: left
-  collapse: expanded
+  - name: Executive Summary
+    subsections:
+      - name: "The Problem: A paradox in LLM Capabilities"
+      - name: High-level takeaways
+      - name: Key Results
+      - name: Bottom line
+  - name: 1. Motivation
+  - name: 2. Dataset & Setup
+    subsections:
+      - name: Custom Dataset
+      - name: Forced-Choice Output
+      - name: "Terminology and Assumptions:"
+      - name: Baseline Performance
+  - name: Part I - Geometry & Emergence: Finding the Knowledge
+  - name: "4. Part II — Readout vs Representation: Finding the Failure"
+  - name: 5. Part III — Causal Edits (Patching & Ablations)
+  - name: "6. Limitations & Possible Next steps:"
+  - name: 7. Appendix
+  - name: 8. References
+  - name: 9. Disclaimer
 ---
 
 <!-- # Debugging Numeric Comparisons in LLMs -->
@@ -89,20 +107,6 @@ LLMs can ace complex reasoning yet still fail at simple numeric comparisons like
 ## Bottom line
 
 Gemma-2-2B-IT internally represent the correct comparator but the last-layer MLP (readout) introduces a Yes-biased corruption. Simple, principled interventions—patching or ablating ~50 neurons—substantially reduce errors, and diagnostics suggest a lingering length heuristic distinct from true value comparison.
-
----
-
-## Table of Contents
-
-- [1. Motivation](#1-motivation)
-- [2. Dataset & Setup](#2-dataset--setup)
-- [3. Part I — Geometry & Emergence](#3-part-i--geometry--emergence)
-- [4. Part II — Readout vs Representation](#4-part-ii--readout-vs-representation)
-- [5. Part III — Causal Edits (Patching & Ablations)](#5-part-iii--causal-edits-patching--ablations)
-- [6. Limitations & Possible Next steps](#6-limitations--possible-next-steps)
-- [7. Appendix](#7-appendix)
-- [8. References](#8-references)
-- [9. Disclaimer](#9-disclaimer)
 
 ---
 
