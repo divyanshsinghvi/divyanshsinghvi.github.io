@@ -4,11 +4,44 @@ set -euo pipefail
 tmp_dir="$(mktemp -d)"
 tmp_override="${tmp_dir}/comments-test-override.yml"
 tmp_site="${tmp_dir}/site"
+giscus_fixture="_posts/2022-12-10-giscus-comments.md"
+disqus_fixture="_posts/2015-10-20-disqus-comments.md"
 
 cleanup() {
+  rm -f "${giscus_fixture}" "${disqus_fixture}"
   rm -rf "${tmp_dir}"
 }
 trap cleanup EXIT
+
+cat >"${giscus_fixture}" <<'MARKDOWN'
+---
+layout: post
+title: a post with giscus comments
+date: 2022-12-10 11:59:00-0400
+description: an integration fixture for giscus comments
+tags: comments
+categories: test-fixtures
+giscus_comments: true
+related_posts: false
+---
+
+This post verifies Giscus comments.
+MARKDOWN
+
+cat >"${disqus_fixture}" <<'MARKDOWN'
+---
+layout: post
+title: a post with disqus comments
+date: 2015-10-20 11:59:00-0400
+description: an integration fixture for disqus comments
+tags: comments
+categories: test-fixtures
+disqus_comments: true
+related_posts: false
+---
+
+This post verifies Disqus comments.
+MARKDOWN
 
 cat >"${tmp_override}" <<'YAML'
 giscus:
