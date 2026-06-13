@@ -7,7 +7,7 @@ tags: [LLM, Mechanistic Interpretability, Numeric Reasoning, Debugging]
 cover: /assets/debug-num-llms/pca_scatter_plot_truth.png
 math: true
 layout: post
-author: divyansh singhvi and LLMs
+author: Divyansh Singhvi
 toc:
   sidebar: left
   collapse: expanded
