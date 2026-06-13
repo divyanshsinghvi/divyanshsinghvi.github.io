@@ -123,8 +123,7 @@ GEM
     eventmachine (1.2.7)
     execjs (2.10.1)
     fast-stemmer (1.0.2)
-    feedjira (4.0.2)
-      logger (>= 1.0, < 2)
+    feedjira (3.2.1)
       loofah (>= 2.3.1, < 3)
       sax-machine (>= 1.0, < 2)
     ffi (1.17.4-aarch64-linux-gnu)
@@ -429,7 +428,7 @@ CHECKSUMS
   eventmachine (1.2.7) sha256=994016e42aa041477ba9cff45cbe50de2047f25dd418eba003e84f0d16560972
   execjs (2.10.1) sha256=abe0ae028467eb8e30c10814eb934d07876a691aae7e803d813b7ce5a75e73f1
   fast-stemmer (1.0.2) sha256=d0aa9fd9cfbca836a09d8abb122552ac8234130271a3b0da1cb077323d650819
-  feedjira (4.0.2) sha256=3e7a90d24fd66eddc809539e637a86a02de1a7e038cd40157e916ed2f3b5ff71
+  feedjira (3.2.1) sha256=715964aa9e6eefcb6780a51d2c395d3f8acf0f06a8d0ff9047540a70eccb5ca0
   ffi (1.17.4-aarch64-linux-gnu) sha256=b208f06f91ffd8f5e1193da3cae3d2ccfc27fc36fba577baf698d26d91c080df
   ffi (1.17.4-aarch64-linux-musl) sha256=9286b7a615f2676245283aef0a0a3b475ae3aae2bb5448baace630bb77b91f39
   ffi (1.17.4-arm-linux-gnu) sha256=d6dbddf7cb77bf955411af5f187a65b8cd378cb003c15c05697f5feee1cb1564

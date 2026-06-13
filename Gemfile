@@ -4,6 +4,7 @@ gem 'jekyll'
 
 # Core plugins that directly affect site building
 group :jekyll_plugins do
+    gem 'feedjira', '= 3.2.1' # keep Substack RSS parsing compatible with al_ext_posts
     gem 'jekyll-3rd-party-libraries'
     gem 'jekyll-archives-v2'
     gem 'jekyll-cache-bust'
