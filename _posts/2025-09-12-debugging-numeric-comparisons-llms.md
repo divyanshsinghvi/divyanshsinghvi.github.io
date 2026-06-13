@@ -6,8 +6,11 @@ description: "Layerwise geometry shows the model internally separates Yes/No, bu
 tags: [LLM, Mechanistic Interpretability, Numeric Reasoning, Debugging]
 cover: /assets/debug-num-llms/pca_scatter_plot_truth.png
 math: true
-layout: post
-author: Divyansh Singhvi
+layout: distill
+authors:
+  - name: Divyansh Singhvi
+    affiliations:
+      name: Independent Researcher
 toc:
   sidebar: left
   collapse: expanded
